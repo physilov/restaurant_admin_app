@@ -17,7 +17,7 @@ class ProductModel{
   double _rating;
   String _image;
   String _description;
-  int _price;
+  double _price;
   String _category;
   bool _featured;
   int _rates;
@@ -28,7 +28,7 @@ class ProductModel{
   String get image => _image;
   String get description => _description;
   double get rating => _rating;
-  int get price => _price;
+  double get price => _price;
   int get rates => _rates;
   bool get featured => _featured;
   String get category => _category;

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:restaurant_admin_app/providers/product.dart';
 import 'package:restaurant_admin_app/providers/user.dart';
+import 'package:restaurant_admin_app/screens/order_screen.dart';
 import 'package:restaurant_admin_app/screens/product_screen.dart';
 import 'package:restaurant_admin_app/services/change_screen_helper.dart';
 import 'package:restaurant_admin_app/widgets/custom_text.dart';
@@ -54,12 +55,16 @@ class DashboardScreen extends StatelessWidget {
               title: CustomText(text: "Home"),
             ),
             ListTile(
-              onTap: () {},
+              onTap: () {
+                changeScreen(context, OrdersScreen());
+              },
               leading: Icon(Icons.bookmark_border),
               title: CustomText(text: "Orders"),
             ),
             ListTile(
-              onTap: () {},
+              onTap: () {
+                changeScreen(context, ProductsScreen());
+              },
               leading: Icon(Icons.fastfood),
               title: CustomText(text: "Products"),
             ),

@@ -166,5 +166,16 @@ class AuthProvider with ChangeNotifier {
     return false;
   }
 
+  Future loadProducts() async {
+    products = await _productServices.getProducts();
+    notifyListeners();
+  }
+
+  Future<void> reload() async {
+    await loadProducts();
+    await getOrders();
+    await getTotalSales();
+    notifyListeners();
+  }
 
 }

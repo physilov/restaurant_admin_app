@@ -14,6 +14,7 @@ class CartItemModel{
   int _price;
   String _productId;
   int _quantity;
+  int _date;
 
 
   String get id => _id;
@@ -22,6 +23,7 @@ class CartItemModel{
   int get price => _price;
   int get quantity => _quantity;
   String get productId => _productId;
+  int get date => _date;
 
 
   CartItemModel.fromMap(Map data){
@@ -31,6 +33,7 @@ class CartItemModel{
     _image = data[IMAGE];
     _quantity = data[QUANTITY];
     _productId = data[PRODUCT_ID];
+    _date = DateTime.daysPerWeek;
   }
 
   Map toMap() => {

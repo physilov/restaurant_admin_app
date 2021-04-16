@@ -61,7 +61,7 @@ class ProductWidget extends StatelessWidget {
                   ),
 
                   SizedBox(
-                    height: 25,
+                    height: 15,
                   ),
 
                   Padding(
@@ -69,7 +69,7 @@ class ProductWidget extends StatelessWidget {
                     child: Row(
                       children: <Widget>[
                         CustomText(text: "from: ", color: Colors.grey, weight: FontWeight.w300, size: 14,),
-                        SizedBox(width: 10,),
+                        SizedBox(width: 8,),
                         GestureDetector(
                             onTap: ()async{
 //                              await productProvider.loadProductsByRestaurant(
